@@ -158,7 +158,7 @@
               var $overlay = $('#sidenav-overlay');
               var oldWidth = $body.innerWidth();
               $body.css('overflow', 'hidden');
-              $body.width(oldWidth);
+              //$body.width(oldWidth);
 
               // If overlay does not exist, create one and if it is clicked, close menu
               if ($overlay.length === 0) {
@@ -237,7 +237,7 @@
                   }
 
                   $overlay.velocity({opacity: 1 }, {duration: 50, queue: false, easing: 'easeOutQuad'});
-                  $dragTarget.css({width: '50%', right: 0, left: ''});
+                  $dragTarget.css({width: '60%', right: 0, left: ''});
                   menuOut = true;
                 }
                 else if (!menuOut || velocityX > 0.3) {
@@ -263,7 +263,7 @@
                   }
 
                   $overlay.velocity({opacity: 1 }, {duration: 50, queue: false, easing: 'easeOutQuad'});
-                  $dragTarget.css({width: '50%', right: '', left: 0});
+                  $dragTarget.css({width: '60%', right: '', left: 0});
                   menuOut = true;
                 }
                 else if (!menuOut || velocityX < -0.3) {
@@ -300,17 +300,17 @@
             var $overlay = $('<div id="sidenav-overlay"></div>');
             var oldWidth = $body.innerWidth();
             $body.css('overflow', 'hidden');
-            $body.width(oldWidth);
+            //$body.width(oldWidth);
 
             // Push current drag target on top of DOM tree
             $('body').append($dragTarget);
 
             if (options.edge === 'left') {
-              $dragTarget.css({width: '50%', right: 0, left: ''});
+              $dragTarget.css({width: '60%', right: 0, left: ''});
               menu_id.velocity({'translateX': [0, -1 * options.menuWidth]}, {duration: 300, queue: false, easing: 'easeOutQuad'});
             }
             else {
-              $dragTarget.css({width: '50%', right: '', left: 0});
+              $dragTarget.css({width: '60%', right: '', left: 0});
               menu_id.velocity({'translateX': [0, options.menuWidth]}, {duration: 300, queue: false, easing: 'easeOutQuad'});
             }
 
